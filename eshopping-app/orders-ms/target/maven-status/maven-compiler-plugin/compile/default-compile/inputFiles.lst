@@ -1,0 +1,15 @@
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\config\EventStoreDBConfig.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\commons\converters\OffsetDateTimeReadConverter.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\write\services\OrdersWriteServicesImpl.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\OrdersMsStarter.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\write\commands\OrderCommand.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\commons\exceptions\OrdersMsException.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\write\events\OrderEvent.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\write\events\EventType.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\commons\converters\OffsetDateTimeWriteConverter.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\commons\OrdersMsError.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\write\services\OrdersWriteServices.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\write\exceptions\CantAppendEventToStreamException.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\commons\Utils.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\config\MongoDBConfig.java
+C:\___WORKSPACE\___REPOSITORIES\___TEST\___OBSERVABILITY\eshopping-opentelemetry-poc\eshopping-app\orders-ms\src\main\java\it\millsoft\orders\ms\write\events\OrderPlacedEvent.java

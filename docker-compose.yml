@@ -1,0 +1,59 @@
+
+###################
+###  Services   ###
+###################
+
+services:
+
+  ### The EventStoreDB instance
+  eventstoredb:
+    image: eventstore/eventstore:22.10.1-buster-slim
+    environment:
+      - EVENTSTORE_CLUSTER_SIZE=1
+      - EVENTSTORE_RUN_PROJECTIONS=All
+      - EVENTSTORE_START_STANDARD_PROJECTIONS=true
+      - EVENTSTORE_EXT_TCP_PORT=1113
+      - EVENTSTORE_HTTP_PORT=2113
+      - EVENTSTORE_INSECURE=true
+      - EVENTSTORE_ENABLE_EXTERNAL_TCP=true
+      - EVENTSTORE_ENABLE_ATOM_PUB_OVER_HTTP=true
+    ports:
+      - "1113:1113"
+      - "2113:2113"
+    volumes:
+      - type: volume
+        source: eventstore-storage-data
+        target: /var/lib/eventstore
+      - type: volume
+        source: eventstore-storage-logs
+        target: /var/log/eventstore
+
+  ### The MongoDB instance
+  mongodb:
+    container_name: mongodb-container
+    image: mongo:6.0.4
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: root-db
+    ports:
+      - 27017:27017
+    volumes:
+      -  mongodb-storage:/data/db
+      - ./infrastructure-stack/mongodb/docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+
+  ### The LRA Coordinator - Used to handle SAGA
+  lra-coordinator:
+    container_name: lra-coordinator-container
+    image: jbosstm/lra-coordinator:5.12.4.Final
+    ports:
+      - 15000:8080 # --> http://localhost:15000/swagger-ui/
+
+###################
+###   Volumes   ###
+###################
+
+volumes:
+  mongodb-storage:
+  eventstore-storage-data:
+  eventstore-storage-logs:

@@ -1,0 +1,33 @@
+
+####################################
+#### Infrastructural Properties ####
+####################################
+
+server:
+  port: 12000
+  servlet:
+    context-path: /orders-ms
+
+spring:
+  jersey:
+    type: servlet
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+    serialization:
+      write-dates-as-timestamps: false
+
+lra:
+  coordinator:
+    uri: ${LRA_COORDINDATOR_URI}
+
+eventstoredb:
+  uri: ${EVENTSTOREDB_URI}
+
+#esdb+discover://[not provided]:2113?tls=false&keepAliveTimeout=10000&keepAliveInterval=10000
+#mongodb://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@${MONGODB_URL}:${MONGODB_PORT}/${MONGODB_DB_NAME}
+#http://host.docker.internal:15000/lra-coordinator
+

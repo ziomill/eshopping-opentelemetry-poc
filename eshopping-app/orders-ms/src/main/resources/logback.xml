@@ -1,0 +1,24 @@
+<configuration>
+
+    <!-- To evaluate optional ENV_VARIABLES -->
+    <variable name="EMPTY" value="{}" />
+
+    <!-- Not structured pattern -->
+    <variable name="ELAB_CONTAINER_NAME" value="%replace(${CONTAINER_NAME:-%property{EMPTY}}){'\bnull\b',''}" />
+    <variable name="ELAB_CONTAINER_NAMESPACE" value="%replace(${CONTAINER_NAMESPACE:-%property{EMPTY}}){'\bnull\b',''}" />
+    <variable name="ELAB_CONTAINER_IMAGE_VERSION" value="%replace(${CONTAINER_IMAGE_VERSION:-%property{EMPTY}}){'\bnull\b',''}" />
+    <appender name="STDOUT_CLASSIC" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%boldWhite([%date{dd/mm/yyyy-HH:mm:ss.SSS,UTC}]) - %cyan([applicative_log - ${ELAB_CONTAINER_NAME} | ${ELAB_CONTAINER_NAMESPACE} | ${ELAB_CONTAINER_IMAGE_VERSION}]) - %highlight(%-5level) %boldMagenta([%mdc{trace_id} - %mdc{span_id}]) %yellow([%thread]) %cyan(%logger{30} [%file : %line]) %boldGreen(%msg) %n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <!-- Use the STDOUT_CLASSIC appender as default -->
+        <appender-ref ref="${APPENDER_NAME:-STDOUT_CLASSIC}" />
+    </root>
+
+    <logger name="org.springframework.data.mongodb.core.MongoTemplate" level="DEBUG" />
+
+</configuration>
+

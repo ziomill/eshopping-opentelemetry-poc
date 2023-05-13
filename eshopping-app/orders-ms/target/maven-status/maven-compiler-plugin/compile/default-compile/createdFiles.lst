@@ -1,0 +1,15 @@
+it\millsoft\orders\ms\config\MongoDBConfig.class
+it\millsoft\orders\ms\write\exceptions\CantAppendEventToStreamException.class
+it\millsoft\orders\ms\OrdersMsStarter.class
+it\millsoft\orders\ms\config\EventStoreDBConfig.class
+it\millsoft\orders\ms\write\events\OrderPlacedEvent.class
+it\millsoft\orders\ms\commons\converters\OffsetDateTimeWriteConverter.class
+it\millsoft\orders\ms\write\services\OrdersWriteServices.class
+it\millsoft\orders\ms\commons\OrdersMsError.class
+it\millsoft\orders\ms\write\commands\OrderCommand.class
+it\millsoft\orders\ms\commons\Utils.class
+it\millsoft\orders\ms\write\events\OrderEvent.class
+it\millsoft\orders\ms\commons\converters\OffsetDateTimeReadConverter.class
+it\millsoft\orders\ms\commons\exceptions\OrdersMsException.class
+it\millsoft\orders\ms\write\services\OrdersWriteServicesImpl.class
+it\millsoft\orders\ms\write\events\EventType.class
